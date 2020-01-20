@@ -9,19 +9,14 @@ namespace :update_currency do
       url = URI.parse(URI.escape("http://www.cbr.ru/scripts/XML_daily.asp"))
       page = Nokogiri::XML(Net::HTTP.get(url))
 
-      Currency.destroy_all
-
       page.xpath("ValCurs/Valute").each do |valute|
         code = valute.xpath("CharCode").text
         rate = valute.xpath("Value").text
+        name = valute.xpath("Name").text
+        
+        currency = Currency.find_or_create_by!(code: code, name: name)
 
-        currency = Currency.find_or_create_by!(code: code)
-
-        puts "current rate: #{currency.rate}, new rate: #{rate}"
         currency.update!(rate: rate)
-
-        puts "============================================================"
-        puts
       end
 
     rescue Exception => e
