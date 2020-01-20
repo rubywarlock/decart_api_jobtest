@@ -13,7 +13,7 @@ namespace :update_currency do
         code = valute.xpath("CharCode").text
         rate = valute.xpath("Value").text
         name = valute.xpath("Name").text
-        
+
         currency = Currency.find_or_create_by!(code: code, name: name)
 
         currency.update!(rate: rate)
