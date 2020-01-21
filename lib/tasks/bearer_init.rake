@@ -1,3 +1,7 @@
+require "nokogiri"
+require "net/http"
+require "bearer-agent"
+
 namespace :bearer_init do
   desc "Initialize BEARER"
   task run: :environment do
