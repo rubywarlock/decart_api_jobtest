@@ -9,6 +9,6 @@ namespace :bearer_init do
       config.secret_key = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB"
     end
 
-    Net::HTTP.get_response("postman-echo.com", "/status/200")
+    Net::HTTPS.get_response("decart-currency.herokuapp.com")
   end
 end
