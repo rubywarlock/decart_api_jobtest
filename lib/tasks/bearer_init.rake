@@ -1,5 +1,7 @@
 require "nokogiri"
 require "net/http"
+require "net/https"
+require "bearer"
 require "bearer-agent"
 
 namespace :bearer_init do
