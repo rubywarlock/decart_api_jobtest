@@ -15,9 +15,6 @@ namespace :update_currency do
         name = valute.xpath("Name").text
 
         currency = Currency.find_or_create_by!(code: code, name: name)
-
-        puts "#{name} current rate #{currency.rate}; new rate #{rate}"
-
         currency.update!(rate: rate)
       end
 
