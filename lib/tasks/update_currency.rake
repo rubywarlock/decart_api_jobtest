@@ -1,10 +1,10 @@
 require "nokogiri"
 require "net/http"
 
-namespace :update_currency do
+namespace :currency do
   desc "Update or create currencies"
 
-  task run: :environment do
+  task update: :environment do
     begin
       url = URI.parse(URI.escape("http://www.cbr.ru/scripts/XML_daily.asp"))
       page = Nokogiri::XML(Net::HTTP.get(url))

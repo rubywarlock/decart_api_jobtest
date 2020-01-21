@@ -1,5 +1,11 @@
 class CurrenciesController < ApplicationController
-  before_action :set_currency, only: :show
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+
+  TOKEN = "secret_test"
+
+  before_action :set_currency, only: [:show]
+  before_action :authenticate, except: [:show]
 
   # GET /currencies
   def index
@@ -16,5 +22,11 @@ class CurrenciesController < ApplicationController
   private
     def set_currency
       @currency = Currency.find(params[:id])
+    end
+
+    def authenticate
+      authenticate_or_request_with_http_token do |token, options|
+        ActiveSupport::SecurityUtils.secure_compare(TOKEN, token)
+      end
     end
 end
