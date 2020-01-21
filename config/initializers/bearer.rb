@@ -1,3 +1,5 @@
+require 'bearer-rails'
+
 Bearer::Configuration.setup do |config|
   # config.api_key = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB" # copy and paste the `Secret Key` from https://app.bearer.sh/keys
   # config.client_id = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB" # copy and paste the `Publishable Key` from https://app.bearer.sh/keys
