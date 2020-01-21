@@ -44,6 +44,8 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     bearer (1.0.1)
+    bearer-agent (2.0.0)
+      rack
     bearer-rails (1.2.0)
       activesupport (~> 5.2.3)
       bearer (~> 1.0.0)
@@ -140,6 +142,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bearer-agent
   bearer-rails
   bootsnap (>= 1.1.0)
   byebug
