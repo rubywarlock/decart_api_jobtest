@@ -16,6 +16,8 @@ namespace :update_currency do
 
         currency = Currency.find_or_create_by!(code: code, name: name)
 
+        puts "#{name} current rate #{currency.rate}; new rate #{rate}"
+
         currency.update!(rate: rate)
       end
 
