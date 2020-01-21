@@ -30,6 +30,7 @@ gem 'rack-cors'
 #
 gem 'jwt'
 
+gem 'bearer'
 gem 'bearer-rails'
 
 group :development, :test do
