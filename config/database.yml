@@ -23,8 +23,8 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: d5ol50eu50tfcp
+  database: <%= ENV["DB_NAME"] %>
   pool: 5
-  host: ec2-54-217-243-19.eu-west-1.compute.amazonaws.com
-  username: lygpspnnvxqpqb
-  password: d2dfdda8344b3b35932ae97fe7b15afcac0c16886c4bc1bf03a4981d6fe3992c
+  host: <%= ENV["DATABASE_URL"] %>
+  username: <%= ENV["DB_USER_NAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
