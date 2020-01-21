@@ -1,8 +1,6 @@
-require "nokogiri"
 require "net/http"
 require "net/https"
-require "bearer"
-require "bearer-agent"
+require "bearer-rails"
 
 namespace :bearer_init do
   desc "Initialize BEARER"

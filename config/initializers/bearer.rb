@@ -7,6 +7,13 @@ Bearer::Configuration.setup do |config|
 end
 =end
 
+Bearer::Configuration.setup do |config|
+  config.api_key = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB"
+  config.secret = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB" ## Used for the WebHook
+end
+
+=begin
 Bearer.init_config do |config|
   config.secret_key = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB"
 end
+=end
