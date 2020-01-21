@@ -7,6 +7,8 @@ Bearer::Configuration.setup do |config|
 end
 =end
 
+require 'bearer-rails'
+
 Bearer::Configuration.setup do |config|
   config.api_key = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB"
   config.secret = "sk_production_PTbWALhx_4O7syBTTw9oMuvFoTWzpggB" ## Used for the WebHook
