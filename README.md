@@ -12,9 +12,9 @@
 
 https://decart-currency.herokuapp.com/
 
-* https://decart-currency.herokuapp.com/currencies # не требует авторизации
+* https://decart-currency.herokuapp.com/currencies # требует авторизации
 
-* https://decart-currency.herokuapp.com/currencies/1 # требует авторизации
+* https://decart-currency.herokuapp.com/currencies/1 # не требует авторизации
 
 ### Тестирование
 
