@@ -19,7 +19,7 @@ https://decart-currency.herokuapp.com/
 ### Тестирование
 
 ```
-curl -i -H "AUTHORIZATION: Token secret" -H "Content-Type: application/json" http://localhost:3000/currencies/1
+curl -i -H "AUTHORIZATION: Token secret" -H "Content-Type: application/json" http://localhost:3000/currencies
 ```
 
 ```
